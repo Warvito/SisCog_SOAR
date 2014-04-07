@@ -1,0 +1,17 @@
+sp {propose*initialize-sisCog
+   (state <s> ^superstate nil
+             -^name)
+-->
+   (<s> ^operator <o> +)
+   (<o> ^name initialize-sisCog)
+}
+
+sp {apply*initialize-sisCog
+   (state <s> ^operator <op>)
+   (<op> ^name initialize-sisCog)
+-->
+   (<s> ^name sisCog
+        ^target T)
+   (T ^pos 1)
+}
+
