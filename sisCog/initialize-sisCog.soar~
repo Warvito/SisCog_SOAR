@@ -11,7 +11,7 @@ sp {apply*initialize-sisCog
    (<op> ^name initialize-sisCog)
 -->
    (<s> ^name sisCog
-        ^target T)
-   (T ^pos 1)
+        ^target <T>)
+   (<T> ^pos 1)
 }
 
