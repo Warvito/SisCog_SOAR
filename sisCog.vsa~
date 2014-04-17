@@ -3,8 +3,9 @@ VERSION 4
 0	ROOT sisCog sisCog 1
 1	0	FOLDER all all 2
 2	0	FOLDER elaborations elaborations 3
-3	0	FOPERATOR _firstload _firstload.soar 7
-4	0	OPERATOR disparar disparar.soar 6
-5	0	OPERATOR initialize-sisCog initialize-sisCog.soar 4
-6	0	OPERATOR tictac tictac.soar 5
+3	0	FOPERATOR _firstload _firstload.soar 4
+4	0	OPERATOR disparar disparar.soar 5
+5	0	OPERATOR espera espera.soar 6
+6	0	OPERATOR initialize-sisCog initialize-sisCog.soar 7
+7	0	OPERATOR tictac tictac.soar 8
 END
