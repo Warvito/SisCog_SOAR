@@ -11,8 +11,10 @@ sp {apply*initialize-sisCog
    (<op> ^name initialize-sisCog)
 -->
    (<s> ^name projSisCog
-        ^clock <c>)
+        ^clock <c>
+        ^tiro <t>)
    (<c> ^estado tic
         ^time 1)
 }
+
 
