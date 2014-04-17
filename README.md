@@ -12,3 +12,7 @@ Um alvo que se move na "mente" do agente.
 ###2 passo
 
 O agente observando um alvo do ambiente.
+
+###3 passo
+
+Percepção de tempo do agente.
