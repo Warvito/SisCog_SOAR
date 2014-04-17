@@ -5,3 +5,4 @@ pushd elaborations
 source elaborations_source.soar
 popd
 source initialize-sisCog.soar
+source tictac.soar

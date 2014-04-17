@@ -3,5 +3,6 @@ VERSION 4
 0	ROOT sisCog sisCog 1
 1	0	FOLDER all all 2
 2	0	FOLDER elaborations elaborations 3
-3	0	OPERATOR initialize-sisCog initialize-sisCog.soar 5
+3	0	OPERATOR initialize-sisCog initialize-sisCog.soar 4
+4	0	OPERATOR tictac tictac.soar 5
 END
