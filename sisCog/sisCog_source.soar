@@ -4,5 +4,7 @@ popd
 pushd elaborations
 source elaborations_source.soar
 popd
+source _firstload.soar
+source disparar.soar
 source initialize-sisCog.soar
 source tictac.soar

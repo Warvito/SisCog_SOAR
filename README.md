@@ -16,3 +16,7 @@ O agente observando um alvo do ambiente.
 ###3 passo
 
 Percepção de tempo do agente.
+
+###4 passo
+
+Atuar no Ambiente
