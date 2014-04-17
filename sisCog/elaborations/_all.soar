@@ -1,9 +1,0 @@
-sp {elaborate*moveTarget
-   (state <s> ^name sisCog
-              ^target <t>)
-   (<t> ^pos <p>
-        ^pos {<p> < 5})   
--->
-   (<t> ^pos (+ <p> 1)
-        ^pos <p> -)
-}

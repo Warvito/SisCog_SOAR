@@ -8,3 +8,7 @@ Aqui consta um projeto segundo a estrutura do VisualSoar(uma espécie de IDE p/ 
 ###1 passo 
 
 Um alvo que se move na "mente" do agente.
+
+###2 passo
+
+O agente observando um alvo do ambiente.
