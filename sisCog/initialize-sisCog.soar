@@ -12,11 +12,8 @@ sp {apply*initialize-sisCog
    (<op> ^name initialize-sisCog)
    (<io> ^output-link <out>)
 -->
-   (<s> ^name projSisCog
-        ^clock <c>
-        ^tiro <t>
-        ^status not_ready)        
    (<out> ^fire true)
-   (<c> ^estado tic
-        ^time 1)
+   (<out> ^move <M1>)
+   (<M1> ^speed 20)  
+   
 }
