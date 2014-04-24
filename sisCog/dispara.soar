@@ -1,7 +1,7 @@
-sp {projSisCog*propose*dispara
+sp {propose*dispara
    (state <s> ^name projSisCog)
 -->
-   (<s> ^operator <op> =)
+   (<s> ^operator <op> + =)
    (<op> ^name dispara)
 }
 
