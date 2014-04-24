@@ -1,0 +1,18 @@
+sp {projSisCog*propose*espera
+   (state <s> ^name projSisCog)
+-->
+   (<s> ^operator <op> =)
+   (<op> ^name espera)
+}
+
+sp {apply*espera
+   (state <s> ^operator <op> 
+              ^io <io>)
+   (<op> ^name espera)
+   (<io> ^output-link <out>)
+   (<out> ^gatilho <g>)
+   (<g> ^acionado <st>)
+-->
+   (<g> ^acionado false)
+   (<g> ^acionado <st> -)
+}
