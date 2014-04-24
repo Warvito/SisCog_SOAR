@@ -13,10 +13,7 @@ sp {apply*initialize-sisCog
    (<io> ^output-link <out>)
 -->
    (<s> ^name projSisCog
-        ^clock <c>
-        ^tiro <t>
-        ^status not_ready)        
-   (<out> ^fire true)
-   (<c> ^estado tic
-        ^time 1)
+        ^clock <c>)   
+   (<out> ^gatilho <g>)
+   (<g> ^acionado unknow)
 }
