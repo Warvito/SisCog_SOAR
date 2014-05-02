@@ -1,0 +1,11 @@
+#verificar o score e atualiza os reforços
+sp {projSisCog*detect*goal*achieved
+   (state <s> ^name projSisCog
+              ^reward-link <rl>
+             ^io.input-link <il>)
+   (<il> ^score <sc>)
+   
+--> 
+   (<rl> ^reward.value <sc>)
+   #(halt)
+}

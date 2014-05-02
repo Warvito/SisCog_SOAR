@@ -1,0 +1,60 @@
+import sys
+sys.path.append('./bin')
+import Python_sml_ClientInterface as sml
+k = sml.Kernel.CreateKernelInNewThread()
+
+raw_input("Conecte o kernel no Soar debugger (atraves do menu Kernel) e pressione uma tecla.")
+
+agent = k.CreateAgent('soar')
+answer = agent.LoadProductions('projSisCog_RL.soar')
+
+if answer==False:
+    raw_input("Erro ao carregar arquivo SOAR. Carregue manualmente no debugger e entao pressione alguma tecla.")
+
+scoreList = []
+for j in range(20):
+    print "Inicio do treino {0}\n".format(j)
+    in_Soar = agent.GetInputLink()
+    position = agent.CreateIntWME(in_Soar, "position", -1)
+    agent.Commit()
+
+    i = 0;
+    while True:
+        print "Posicao: {0}".format(i)
+        agent.Update(position, i)
+        agent.Commit()
+        agent.RunSelfTilOutput()
+
+        command = agent.GetCommand(0)
+        action_Soar = command.GetParameterValue('action')
+        command.AddStatusComplete()
+
+        if action_Soar == 'fire' or i >= 10:
+            print "Atirou"
+            break
+        print "Esperou"
+        i += 1
+
+    in_Soar = agent.GetInputLink()
+    score_Soar = 0;
+    if i == 5:
+        score_Soar = 5
+    else:
+        if i == 4 or i == 6:
+            score_Soar = 1
+        else:
+            score_Soar = -1       
+
+    score = agent.CreateIntWME(in_Soar, "score", score_Soar)
+    agent.Commit()
+    agent.RunSelf(1)
+    scoreList.append(score_Soar)
+    print "Pontuacao: {0}\n".format(score_Soar)
+    print "Fim do treino {0}\n\n".format(j)
+
+    agent.DestroyWME(position)
+    agent.DestroyWME(score)
+    agent.ExecuteCommandLine('init-soar')
+
+print agent.ExecuteCommandLine('print --rl')
+print scoreList

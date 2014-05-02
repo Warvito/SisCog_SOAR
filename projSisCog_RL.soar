@@ -1,0 +1,3 @@
+pushd projSisCog_RL
+source projSisCog_RL_source.soar
+popd

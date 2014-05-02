@@ -1,3 +1,0 @@
-pushd sisCog
-source sisCog_source.soar
-popd

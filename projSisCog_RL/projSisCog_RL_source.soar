@@ -1,9 +1,10 @@
+source _firstload.soar
 pushd all
 source all_source.soar
 popd
 pushd elaborations
 source elaborations_source.soar
 popd
-source dispara.soar
-source espera.soar
-source initialize-sisCog.soar
+source fire.soar
+source initialize-projetoSisCog.soar
+source wait.soar
