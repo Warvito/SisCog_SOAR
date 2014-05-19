@@ -1,10 +1,8 @@
-#semelhante ao apply 
 sp {apply*operator*create-action-command
    (state <s> ^operator <o>
               ^io.output-link <ol>)
    (<o> ^name <n>)
    -(<o> ^name initialize-projSisCog)
-   -(<ol> ^type <t>)
 -->
    (<ol> ^type.action <n>)
 }
@@ -17,12 +15,12 @@ sp {apply*operator*create-action-command
 #   (<ol> ^status <st> -)
 #   (<ol> ^action <n> -)
 #}
-# complete vem do python
 sp {apply*operator*remove-command
    (state <s> ^operator <o>
           ^io.output-link <ol>)
    (<ol> ^type <t>)
    (<t>  ^status complete)
 -->
-   (<ol> ^type <t> -)
+   (<ol> ^type <value> -
+         ^status <st> - )
 }

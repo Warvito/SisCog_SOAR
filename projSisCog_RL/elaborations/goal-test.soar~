@@ -1,11 +1,57 @@
-#verificar o score e atualiza os reforÃ§os
-sp {projSisCog*detect*goal*achieved
+sp {projSisCog*detect*max*achieved 
    (state <s> ^name projSisCog
               ^reward-link <rl>
              ^io.input-link <il>)
    (<il> ^score <sc>)
-   
 --> 
-   (<rl> ^reward.value <sc>)
-   #(halt)
+   (write (crlf) |Posição máxima alcançada|) 
+   (write (crlf) |Pontuação: -1|)
+   (<rl> ^reward.value -1
+         ^final-update true)
+   (halt)
+}
+
+sp {projSisCog*detect*bang*miss 
+   (state <s> ^name projSisCog
+              ^reward-link <rl>
+              ^alvo <a>
+              ^tiro <t>)
+   (<a> ^pos << 0 1 2 3 7 8 9 10 >>)
+   (<t> ^gatilho on)
+--> 
+   (write (crlf) |Disparo feito!|) 
+   (write (crlf) |Pontuação: -1|)
+   (<rl> ^reward.value -1
+         ^final-update true)
+   (halt)
+}
+
+sp {projSisCog*detect*bang*hit 
+   (state <s> ^name projSisCog
+              ^reward-link <rl>
+              ^alvo <a>
+              ^tiro <t>)
+   (<a> ^pos << 4 6 >>)
+   (<t> ^gatilho on)
+--> 
+   (write (crlf) |Disparo feito!|) 
+   (write (crlf) |Pontuação: 1|)
+   (<rl> ^reward.value 1
+         ^final-update true)
+   (halt)
+}
+
+sp {projSisCog*detect*bang*bulls_eye
+   (state <s> ^name projSisCog
+              ^reward-link <rl>
+              ^alvo <a>
+              ^tiro <t>)
+   (<a> ^pos 5)
+   (<t> ^gatilho on)
+--> 
+   (write (crlf) |Disparo feito!|) 
+   (write (crlf) |Pontuação: 5|)
+   (<rl> ^reward.value 5
+         ^final-update true)
+   (halt)
 }

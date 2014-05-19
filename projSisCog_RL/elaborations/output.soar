@@ -1,4 +1,3 @@
-#semelhante ao apply 
 sp {apply*operator*create-action-command
    (state <s> ^operator <o>
               ^io.output-link <ol>)
@@ -17,7 +16,6 @@ sp {apply*operator*create-action-command
 #   (<ol> ^status <st> -)
 #   (<ol> ^action <n> -)
 #}
-# complete vem do python
 sp {apply*operator*remove-command
    (state <s> ^operator <o>
           ^io.output-link <ol>)

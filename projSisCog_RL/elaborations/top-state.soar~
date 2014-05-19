@@ -3,3 +3,11 @@ sp {elaborate*top-state*top-state
 -->
    (<s> ^top-state <s>)
 }
+
+sp {elaborate*state*position
+   (state <s> ^name projSisCog
+              ^io.input-link.position <pos>
+              ^alvo <a>)
+   -->
+   (<a> ^position <pos>)
+}
