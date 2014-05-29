@@ -9,7 +9,7 @@ sp {projSisCog*propose*fire
 }
 
 
-gp {rl*fire
+gp {rl*fireA
    (state <s> ^name projSisCog
               ^operator <op> +)
    (<op> ^name fire
@@ -18,7 +18,7 @@ gp {rl*fire
    (<s> ^operator <op> = -1)
 }
 
-gp {rl*fire
+gp {rl*fireB
    (state <s> ^name projSisCog
               ^operator <op> +)
    (<op> ^name fire
@@ -27,7 +27,7 @@ gp {rl*fire
    (<s> ^operator <op> = -0.5)
 }
  
-gp {rl*fire
+gp {rl*fireC
    (state <s> ^name projSisCog
               ^operator <op> +)
    (<op> ^name fire
@@ -37,7 +37,7 @@ gp {rl*fire
 }             
 
 
-gp {rl*fire
+gp {rl*fireD
    (state <s> ^name projSisCog
               ^operator <op> +)
    (<op> ^name fire
@@ -46,7 +46,7 @@ gp {rl*fire
    (<s> ^operator <op> = 0.5)
 }            
 
-gp {rl*fire
+gp {rl*fireE
    (state <s> ^name projSisCog
               ^operator <op> +)
    (<op> ^name fire
